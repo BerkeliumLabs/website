@@ -1,21 +1,29 @@
 # Install
 
-To begin, you can install **@berkelium/nlp-core** using `npm` or `yarn`:
+To begin, you can install **berkelium** using `npm` or `yarn`:
 
 ```shell
-npm i @berkelium/nlp-core
+npm i berkelium
 ```
 
 or
 
 ```shell
-yarn add @berkelium/nlp-core
+yarn add berkelium
 ```
 
-## Import berkelium/nlp-core
+## Import `berkelium`
 
-Simply import **@berkelium/nlp-core** to your project as follows;
+Simply import **berkelium** to your project as follows;
+
+For ESModule syntax
 
 ```js
-import { bkLabs } from '@berkelium/nlp-core';
+import { bkLabs } from 'berkelium';
+```
+
+or CommonJS syntax
+
+```js
+const { bkLabs } = require('berkelium');
 ```

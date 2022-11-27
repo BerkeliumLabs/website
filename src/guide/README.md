@@ -1,12 +1,18 @@
 # Introduction
 
-[![Version](https://img.shields.io/npm/v/@berkelium/nlp-core.svg)](https://www.npmjs.com/package/@berkelium/nlp-core)
-[![](https://data.jsdelivr.com/v1/package/npm/buddhi-nlp/badge)](https://www.jsdelivr.com/package/npm/@berkelium/nlp-core)
+[![Version](https://img.shields.io/npm/v/berkelium.svg)](https://www.npmjs.com/package/berkelium)
+[![](https://data.jsdelivr.com/v1/package/npm/buddhi-nlp/badge)](https://www.jsdelivr.com/package/npm/berkelium)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![BerkeliumLabs Logo](/berkelium_labs_logo_full.png)
 
-[**BerkeliumLabs NLP Core**](https://github.com/BerkeliumLabs/nlp-core) is an open-source natural language processing library developed using Tensorflow.js for intent classification and response retrieval for building chatbots. 
+![BerkeliumLabs Logo](/berkelium_logo.png)
+
+[**Berkelium**](https://github.com/BerkeliumLabs/berkelium-dev-kit) is an open-source natural language processing JavaScript library for intent classification and response retrieval for building chatbots. 
+
+# References
+
+* Developed and Maintained by [BerkeliumLabs](https://www.berkeliumlabs.com/).
+* Tutorials: [Buddhilive Academy](https://www.buddhilive.com/category/berkelium).
 
 <hr>
 

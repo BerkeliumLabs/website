@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Berkelium Labs',
+  title: 'Berkelium',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -56,7 +56,7 @@ module.exports = {
       },
       {
         text: 'GitHub',
-        link: 'https://github.com/BerkeliumLabs/nlp-core/'
+        link: 'https://github.com/BerkeliumLabs/berkelium-dev-kit/'
       }
     ],
     sidebar: {
