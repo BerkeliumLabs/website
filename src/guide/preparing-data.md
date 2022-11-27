@@ -1,29 +1,38 @@
 # Preparing Training Data
 
-Training a chat model using **@berkelium/nlp-core** is very easy and straight forward. We use JSON file format to input data for training the model. The JSON file structure is as follows;
+Training a chat model using **berkelium** is very easy and straight forward. We use JSON file format to input data for training the model. The JSON file structure is as follows;
 
 ```json
-    "intents": [{
-            "tag": "greeting",
-            "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
-            "responses": ["Hello, How are you?", "Good to see you", "Hi there, how can I help?"]
-        },
-        {
-            "tag": "goodbye",
-            "patterns": ["Bye", "See you later", "Goodbye"],
-            "responses": ["See you later!", "Have a nice day", "Bye!"]
-        },
-        {
-            "tag": "thanks",
-            "patterns": ["Thanks", "Thank you", "That's helpful"],
-            "responses": ["Your welcome!", "Any time!", "My pleasure"]
-        },
-        {
-            "tag": "fallback",
-            "patterns": [""],
-            "responses": ["Sorry, please say that again", "Please give me more info", "I still can't understand that."]
-        }
+[
+  {
+    "tag": "greeting",
+    "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+    "responses": [
+      "Hello, How are you?",
+      "Good to see you",
+      "Hi there, how can I help?"
     ]
+  },
+  {
+    "tag": "goodbye",
+    "patterns": ["Bye", "See you later", "Goodbye"],
+    "responses": ["See you later!", "Have a nice day", "Bye!"]
+  },
+  {
+    "tag": "thanks",
+    "patterns": ["Thanks", "Thank you", "That's helpful"],
+    "responses": ["Your welcome!", "Any time!", "My pleasure"]
+  },
+  {
+    "tag": "fallback",
+    "patterns": [""],
+    "responses": [
+      "Sorry, please say that again",
+      "Please give me more info",
+      "I still can't understand that."
+    ]
+  }
+]
 ```
 
 This is the format of JSON file that we use as the training data for the classification.

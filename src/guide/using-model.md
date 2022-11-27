@@ -89,4 +89,4 @@ async function callbackFunction() {
 }
 ```
 
-Please feel free to [report a bug](https://github.com/BerkeliumLabs/nlp-core/issues) if you find while using [**@berkelium/nlp-core**](https://www.npmjs.com/package/@berkelium/nlp-core).
+Please feel free to [report a bug](https://github.com/BerkeliumLabs/berkelium-dev-kit/issues) if you find while using [**berkelium**](https://www.npmjs.com/package/berkelium).
