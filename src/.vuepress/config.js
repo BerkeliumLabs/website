@@ -47,8 +47,11 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Guide',
-        link: '/guide/'
+        text: 'Docs',
+        items: [
+          { text: 'v0', link: '/v0/' },
+          { text: 'v1', link: '/v1/' }
+        ]
       },
       {
         text: 'Blog',
@@ -60,9 +63,33 @@ module.exports = {
       }
     ],
     sidebar: {
-      '/guide/': [
+      '/v0/': [
         {
           title: 'Guide',
+          collapsable: false,
+          children: [
+            '',
+            'using-berkelium',
+            'preparing-data',
+            'train-model',
+            'using-model'
+          ]
+        }
+      ],
+      '/v1/': [
+        {
+          title: 'Classification',
+          collapsable: false,
+          children: [
+            '',
+            'using-berkelium',
+            'preparing-data',
+            'train-model',
+            'using-model'
+          ]
+        },
+        {
+          title: 'Core Functions',
           collapsable: false,
           children: [
             '',
