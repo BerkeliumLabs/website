@@ -23,7 +23,6 @@ module.exports = {
     ['link', {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true}],
     ['link', {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap'}],
     ['link', { rel: 'icon', href: '/favicon.png' }],
-    ['script',{async:true, src:'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9435032914308988', crossorigin: 'anonymous'}],
     ['script',{async:true, src:'https://www.googletagmanager.com/gtag/js?id=G-61Q4F7F0RK'}],
     ['script', {}, `
     window.dataLayer = window.dataLayer || [];
@@ -78,25 +77,19 @@ module.exports = {
       ],
       '/v1/': [
         {
-          title: 'Classification',
+          title: 'Guide',
           collapsable: false,
           children: [
             '',
             'using-berkelium',
             'preparing-data',
             'train-model',
-            'using-model'
-          ]
-        },
-        {
-          title: 'Core Functions',
-          collapsable: false,
-          children: [
-            '',
-            'using-berkelium',
-            'preparing-data',
-            'train-model',
-            'using-model'
+            'using-model',
+            'tokenizer',
+            'encoder',
+            'preprocessor',
+            'save',
+            'read'
           ]
         }
       ],
