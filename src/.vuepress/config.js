@@ -81,15 +81,9 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'using-berkelium',
-            'preparing-data',
-            'train-model',
-            'using-model',
-            'tokenizer',
-            'encoder',
-            'preprocessor',
-            'save',
-            'read'
+            'classification',
+            'core',
+            'utils',
           ]
         }
       ],
