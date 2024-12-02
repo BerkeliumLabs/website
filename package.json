@@ -1,7 +1,7 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "description": "Berkelium Labs Official Website",
+  "description": "Berkelium Documentation Website",
   "main": "index.js",
   "authors": {
     "name": "Buddhi Kavindra",
