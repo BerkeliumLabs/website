@@ -48,8 +48,7 @@ module.exports = {
       {
         text: 'Docs',
         items: [
-          { text: 'v0', link: '/v0/' },
-          { text: 'v1', link: '/v1/' }
+          { text: 'Quick Start', link: '/docs/quick-start' }
         ]
       },
       {
@@ -58,35 +57,19 @@ module.exports = {
       },
       {
         text: 'GitHub',
-        link: 'https://github.com/BerkeliumLabs/berkelium-dev-kit/'
+        link: 'https://github.com/BerkeliumLabs/berkelium/'
       }
     ],
     sidebar: {
-      '/v0/': [
+      '/docs/': [
         {
           title: 'Guide',
           collapsable: false,
           children: [
-            '',
-            'using-berkelium',
-            'preparing-data',
-            'train-model',
-            'using-model'
+            'quick-start',
           ]
         }
-      ],
-      '/v1/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'classification',
-            'core',
-            'utils',
-          ]
-        }
-      ],
+      ]
     }
   },
 
