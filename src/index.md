@@ -1,13 +1,18 @@
 ---
 home: true
-heroImage: /berkelium_logo.png
-tagline: Open-source natural language processing JavaScript library for intent classification and response retrieval for building chatbots.
+heroImage: /berkelium-dev-cli.png
+tagline: Your AI Coding Companion ✨💻, an intelligent AI assistant that lives in your terminal. Powered by Node.js, TypeScript, and the Google Gemini API, Berkelium helps you with coding tasks, answers your questions, and streamlines your workflow.
 actionText: Quick Start →
-actionLink: /v1/
-footer: Made by BerkeliumLabs with ❤️
+actionLink: /docs/quick-start
+features:
+- title: Conversational AI
+  details: Chat with Berkelium in natural language and get intelligent responses.
+- title: Code Generation
+  details: Ask Berkelium to write code snippets, functions, or even entire files.
+- title: File System Interaction
+  details: Berkelium can read, write, and search for files in your project.
+footer: Made by Buddhi Kavindra with ❤️
 ---
 
 [![Version](https://img.shields.io/npm/v/berkelium.svg)](https://www.npmjs.com/package/berkelium)
-[![](https://data.jsdelivr.com/v1/package/npm/berkelium/badge)](https://www.jsdelivr.com/package/npm/berkelium)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Rate this package](https://badges.openbase.com/js/rating/berkelium.svg?token=eFryj7L0et4o3RCM+EFzqc4WfUfaPNvy477RdSHHd8k=)](https://openbase.com/js/berkelium?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge)
