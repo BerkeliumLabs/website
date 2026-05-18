@@ -1,40 +1,50 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Berkelium - MCP Codebase Knowledge Graph
+description: Generate semantic, queryable, and interactive knowledge graphs of your codebase for AI agents.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Empower your AI assistants with a deeply parsed, semantic Knowledge Graph of your codebase.
   image:
-    file: ../../assets/houston.webp
+    file: ../../assets/berkelium_logo.png
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Quick Start
+      link: /guides/getting-started/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+      variant: primary
+    - text: Read the Schema Concepts
+      link: /guides/concepts/
+      icon: document
+      variant: secondary
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## 🌟 Key Capabilities
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="Deep AST Parsing" icon="puzzle">
+		Automatically parses codebases using `web-tree-sitter` and official WASM language grammars to understand structural definitions.
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="Semantic TypeGraph DB" icon="database">
+		Persists structural data into a SQLite database (`graph.db`) utilizing the `@nicia-ai/typegraph` ORM layer.
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Leiden Modular Clustering" icon="rocket">
+		Identifies functional communities and microservices natively via the Leiden algorithm, dynamically configurable.
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
+	<Card title="Premium Visualization" icon="magnifiers">
+		Generates a stunning, interactive HTML dashboard powered by Vis.js for deep architectural navigation and insights.
 	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+</CardGrid>
+
+## Built for AI
+
+Berkelium exposes core tools natively over the **Model Context Protocol (MCP)**, allowing agents like Gemini and Claude to dynamically query imports, relationships, and boundaries.
+
+<CardGrid>
+	<Card title="Standardized MCP Interface" icon="setting">
+		Exposes `berkelium_init`, `berkelium_update`, and search tools straight to your LLM's context window.
+	</Card>
+	<Card title="Gemini CLI Native" icon="laptop">
+		Works out-of-the-box as a Gemini CLI extension via the `gemini-extension.json` config.
 	</Card>
 </CardGrid>

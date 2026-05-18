@@ -1,0 +1,43 @@
+---
+title: Core Concepts
+description: Understand the Berkelium TypeGraph Schema
+---
+
+Berkelium maps out semantic symbols and structural relationships, building a **TypeGraph** database defined by four primary entity nodes and three relational edges.
+
+## The Graph Schema
+
+```mermaid
+graph TD
+    %% Nodes
+    FileNode["📄 File Node <br/> (path, name, language, importCount)"]
+    ModuleNode["📦 Module Node <br/> (name)"]
+    ClassNode["🏛️ Class Node <br/> (name)"]
+    FuncNode["⚡ Function Node <br/> (name)"]
+
+    %% Edges
+    FileNode -->|imports| FileNode
+    FileNode -->|imports| ModuleNode
+    FileNode -->|contains| ClassNode
+    FileNode -->|contains| FuncNode
+    ClassNode -->|contains| FuncNode
+    ClassNode -->|inherits| ClassNode
+
+    %% Styling
+    classDef default fill:#1e1e24,stroke:#3a3a4a,color:#e1e1e6;
+    classDef nodeStyle fill:#2d2d3d,stroke:#ff6f00,color:#ffffff,stroke-width:2px;
+    class FileNode,ModuleNode,ClassNode,FuncNode nodeStyle;
+```
+
+### Node Entities
+
+*   **`File`**: Represents a source file. Contains properties: `path` (normalized path), `name` (base name), `language` (programming language), and `importCount`.
+*   **`Module`**: Represents an external library or package name.
+*   **`Class`**: Represents a class, struct, or interface.
+*   **`Function`**: Represents a function, method, or subroutine.
+
+### Relational Edges
+
+*   **`imports`**: Tracks import connections from a `File` to another `File` or an external `Module`.
+*   **`contains`**: Tracks parent-child structural nesting (e.g., `File` contains `Class`, `File` contains `Function`, or `Class` contains a method `Function`).
+*   **`inherits`**: Tracks inheritance chains between a child `Class` and a parent `Class`.

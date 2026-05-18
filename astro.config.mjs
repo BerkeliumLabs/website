@@ -6,19 +6,32 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'Berkelium',
+			logo: {
+				src: './src/assets/berkelium_logo.png',
+				replacesTitle: true,
+			},
+			favicon: '/favicon.png',
+			customCss: [
+				'./src/styles/custom.css',
+			],
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/BerkeliumLabs/Berkelium-dev' }],
 			sidebar: [
 				{
 					label: 'Guides',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'Getting Started', slug: 'guides/getting-started' },
+						{ label: 'Core Concepts', slug: 'guides/concepts' },
+						{ label: 'Leiden Clustering', slug: 'guides/clustering' },
+						{ label: 'AI Integration', slug: 'guides/ai-integration' },
 					],
 				},
 				{
 					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					items: [
+						{ label: 'MCP Tools', slug: 'reference/mcp-tools' },
+						{ label: 'CLI Commands', slug: 'reference/cli-commands' },
+					],
 				},
 			],
 		}),

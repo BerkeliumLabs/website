@@ -1,0 +1,44 @@
+---
+title: MCP Tools
+description: Reference for Model Context Protocol exposed tools
+---
+
+Once running, Berkelium exposes several core tools to the Model Context Protocol (MCP) to interact with the parsed knowledge graph.
+
+### 1. `berkelium_init`
+Initializes a new Berkelium code graph from scratch.
+
+*   **Arguments:**
+    *   `projectRoot` (string, optional): Absolute path to the directory you want to analyze. Defaults to the current working directory.
+*   **Actions:** Generates `./.berkelium`, respects ignores, parses files, runs Leiden clustering, and saves the `graph.db`, JSON, and HTML visualization.
+
+### 2. `berkelium_update`
+Updates an existing code graph efficiently.
+
+*   **Arguments:**
+    *   `projectRoot` (string, optional): Absolute path to the project root. Defaults to the current working directory.
+*   **Actions:** Verifies existing graph, creates timestamped backups (e.g., `graph-1715918340.db.bak`), and incrementally updates the DB/JSON/HTML with current data. Falls back to `berkelium_init` if corrupted.
+
+### 3. `berkelium_search_graph`
+Searches the Berkelium code graph for entities.
+
+*   **Arguments:**
+    *   `query` (string, required): Search query (matched against node ID or name).
+    *   `type` (string, optional): Filter by type: `file`, `class`, `function`, or `external`.
+    *   `projectRoot` (string, optional): Path to the project root directory.
+
+### 4. `berkelium_get_relation`
+Computes the shortest dependency or inheritance path between two nodes.
+
+*   **Arguments:**
+    *   `fromId` (string, required): Starting node ID (e.g., file path or class name).
+    *   `toId` (string, required): Target node ID.
+    *   `projectRoot` (string, optional): Path to the project root directory.
+
+### 5. `berkelium_compute_communities`
+Runs the Leiden algorithm on the code graph.
+
+*   **Arguments:**
+    *   `projectRoot` (string, optional): Path to the project root directory.
+    *   `resolution` (number, optional): Resolution for clustering (default: 1.0). Higher values = smaller communities.
+    *   `persist` (boolean, optional): If true, writes the updated assignments back to output files (default: false).

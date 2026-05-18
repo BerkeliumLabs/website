@@ -1,0 +1,47 @@
+/* src/styles/custom.css */
+/* Radioactive Amber Theme for Berkelium */
+
+:root {
+  /* HSL mapping for #ff6f00 (Amber) */
+  --sl-hue: 26;
+  --sl-saturation: 100%;
+  --sl-lightness: 50%;
+  
+  --sl-color-accent-low: hsl(var(--sl-hue), var(--sl-saturation), 15%);
+  --sl-color-accent: hsl(var(--sl-hue), var(--sl-saturation), var(--sl-lightness));
+  --sl-color-accent-high: hsl(var(--sl-hue), var(--sl-saturation), 75%);
+  --sl-color-text-accent: var(--sl-color-accent-high);
+
+  /* Obsidian dark background tweaks */
+  --sl-color-bg: #0f1014;
+  --sl-color-bg-nav: #14151a;
+}
+
+/* Light mode adjustments (if needed, though dark mode is primary) */
+:root[data-theme='light'] {
+  --sl-color-accent-low: hsl(var(--sl-hue), var(--sl-saturation), 85%);
+  --sl-color-accent: hsl(var(--sl-hue), var(--sl-saturation), 45%);
+  --sl-color-accent-high: hsl(var(--sl-hue), var(--sl-saturation), 30%);
+  --sl-color-text-accent: var(--sl-color-accent);
+}
+
+/* Custom interactive card glow effect */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--sl-color-accent) !important;
+  box-shadow: 0 4px 20px rgba(255, 111, 0, 0.15) !important;
+}
+
+/* Custom glowing badge or buttons */
+.sl-link-button.primary {
+  box-shadow: 0 0 10px rgba(255, 111, 0, 0.4);
+  transition: box-shadow 0.2s ease;
+}
+
+.sl-link-button.primary:hover {
+  box-shadow: 0 0 15px rgba(255, 111, 0, 0.7);
+}

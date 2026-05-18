@@ -1,0 +1,35 @@
+---
+title: AI Integration
+description: Integrate Berkelium with Gemini and Claude
+---
+
+Berkelium is built to integrate directly with AI CLI systems like the Gemini CLI, Claude Code, and Antigravity.
+
+## Registering the Gemini Extension
+
+Register the Berkelium extension in your Gemini configuration to allow your AI session to trigger codebase graph indexing. The `Berkelium-dev` repository includes the necessary `gemini-extension.json` descriptor:
+
+```json
+{
+  "name": "Berkelium",
+  "version": "0.1.0",
+  "description": "Codebase visualization graph extension",
+  "mcpServers": {
+    "berkelium": {
+      "command": "node",
+      "args": [
+        "${extensionPath}${/}src${/}server.js"
+      ],
+      "cwd": "${extensionPath}"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}
+```
+
+## Smart System Rules (`GEMINI.md`)
+
+To make the AI agent context-aware and proactive, place a `GEMINI.md` file in the root of your project instructing the AI agent to:
+
+1. Prefer `berkelium_init` on startup if the `.berkelium/` directory is missing.
+2. Run `berkelium_update` dynamically whenever structural codebase modifications are made to keep the knowledge graph synchronized.

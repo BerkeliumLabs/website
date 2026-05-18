@@ -1,0 +1,20 @@
+---
+title: Leiden Clustering
+description: Discover modular boundaries via Leiden Community Detection
+---
+
+Berkelium runs the **Leiden Algorithm** on the codebase's structural graph to identify functional communities and modular subsystems. This can be pre-computed at build time or dynamically configured at runtime.
+
+## Why Leiden?
+
+The Leiden algorithm improves upon the Louvain method by ensuring that identified communities are well-connected and avoiding poorly connected components. In the context of a codebase, a "community" often represents a cohesive module, a microservice boundary, or a tightly coupled feature set.
+
+## Dynamic Re-Clustering
+
+You can dynamically adjust the granularity of these communities using the `berkelium_compute_communities` MCP tool. 
+
+By passing the `resolution` argument (default: `1.0`), you control the clustering behavior:
+*   **Higher Resolution (> 1.0):** Produces smaller, more granular communities (ideal for micro-analysis).
+*   **Lower Resolution (< 1.0):** Produces larger, macro-level communities (ideal for high-level architecture reviews).
+
+If you set `persist: true`, the updated community assignments will be written back to `graph.json` and `graph.metadata.json`, making them visible in the interactive `graph.html` visualizer.
